@@ -5,6 +5,7 @@ import HelloPage from "../pages/HelloPage"
 import HomePage from "../pages/HomePage"
 import JSXPage from "../pages/JSXPage"
 import ProfilePage from "../pages/ProfilePage"
+import PropsPage from "../pages/PropsPage"
 
 //React Routes, Route 사용시 배열로 관리하기
 const routes = [
@@ -48,6 +49,12 @@ const routes = [
         path: '/bootstrap',
         element: <BootstrapPage />,
         title: '부스트르랩적용',
+    },
+
+    {
+        path: '/props',
+        element: <PropsPage />,
+        title: 'Props적용',
     },
   ]
   export default routes
