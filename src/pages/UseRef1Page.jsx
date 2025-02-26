@@ -1,0 +1,32 @@
+import React, { useRef, useState } from 'react'
+
+//첫번째 사용하는 경우
+//useRef 변화는 감지해야 되지만, 렌더링은 하고 싶지 않을때.
+
+const UseRef1Page = () => {
+  const [count, setCount] = useState(0)
+  const countRef = useRef(0)  // {current: 0}
+
+  console.log(countRef)
+  console.log('호출되고 있음')
+
+  const increaseCountState = () => {
+    setCount(count + 1)
+  }
+  // ref 버튼을 클릭하면 화면 랜더링이 안 됨
+  const increaseCountRef = () => {
+    countRef.current = countRef.current + 1
+  }
+
+  //prettier-ignore
+  return (
+    <div className='text-center mt-5'>
+        <p>State :{count}</p>
+        <p>Ref :{countRef.current}</p>
+        <button onClick={increaseCountState}>State 값 올리라</button>
+        <button onClick={increaseCountRef}>Ref 값 올리라</button>
+    </div>
+  )
+}
+
+export default UseRef1Page
