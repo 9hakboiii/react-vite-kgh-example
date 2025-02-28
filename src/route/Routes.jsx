@@ -4,6 +4,9 @@ import BoardPage from "../pages/BoardPage"
 import BootstrapPage from "../pages/BootstrapPage"
 import ConditionalPage from "../pages/ConditionalPage"
 import CounterPage from "../pages/CounterPage"
+import ClassNameUsePage from "../pages/cssPage/ClassNameUsePage"
+import InlineStylePage from "../pages/cssPage/inlineStylePage"
+import StyledComponent from "../pages/cssPage/StyledComponent"
 import GradeInputPage from "../pages/GradeInputPage"
 import GradeInputPage2 from "../pages/GradeInputPage2"
 import HelloPage from "../pages/HelloPage"
@@ -119,6 +122,24 @@ const routes = [
         path: '/grade2',
         element: <GradeInputPage2 />,
         title: 'gradeinput2',
+    },
+
+    {
+        path: '/inlinestyle',
+        element: <InlineStylePage />,
+        title: '인라인스타일',
+    },
+
+    {
+        path: '/use-css',
+        element: <ClassNameUsePage />,
+        title: 'css파일 적용',
+    },
+
+    {
+        path: '/style-css',
+        element: <StyledComponent />,
+        title: 'styled-components',
     },
   ]
   export default routes
