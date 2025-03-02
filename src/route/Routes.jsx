@@ -1,5 +1,6 @@
 import AxiosClient from "../pages/AxiosClient"
 import AxiosGetPage from "../pages/AxiosGetPage"
+import AxiosGetPage2 from "../pages/AxiosGetPage2"
 import BoardPage from "../pages/BoardPage"
 import BootstrapPage from "../pages/BootstrapPage"
 import ConditionalPage from "../pages/ConditionalPage"
@@ -140,6 +141,12 @@ const routes = [
         path: '/style-css',
         element: <StyledComponent />,
         title: 'styled-components',
+    },
+
+    {
+        path: '/axios2',
+        element: <AxiosGetPage2 />,
+        title: 'axios_api_getdate',
     },
   ]
   export default routes
