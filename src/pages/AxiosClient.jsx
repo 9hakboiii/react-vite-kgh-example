@@ -20,7 +20,7 @@ const AxiosClient = () => {
       .catch(function (error) {
         //에러가 났을때 실행
         console.log(error)
-      })
+      })``
       .then(() => {
         // try catch finally 에서 finally 부분에 해당
         console.log('에러가 나든 안나든 무조건 실행')
