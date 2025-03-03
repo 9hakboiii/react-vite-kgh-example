@@ -7,7 +7,7 @@ import React, { Fragment } from 'react'
 // 표현식 문법 = 식이 값으로 평가될 수 있는 문법
 // 3. 조건문 사용시 삼항연산자 사용 (if문 x)
 // 4. class는 className 으로 표기
-// 5. React DOM은 HRML 에트리뷰트 이름 대신 camelCase 프로퍼티 명명 규칙을 사용 한다.
+// 5. React DOM은 HTML 에트리뷰트 이름 대신 camelCase 프로퍼티 명명 규칙을 사용 한다.
 
 const JSXPage = () => {
 
