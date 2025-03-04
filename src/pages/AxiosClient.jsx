@@ -4,8 +4,7 @@ import React, { useEffect, useState } from 'react'
 const AxiosClient = () => {
   const [contacts, setContacts] = useState(null)
 
-  // useEffect를 사용하면, 버튼을 클릭하지 않아도 최초 한 번 랜더링 때 데이터 불러옴
-  useEffect( () => {
+  useEffect(() => {
     getClick()
   }, [])
 
@@ -20,21 +19,27 @@ const AxiosClient = () => {
       .catch(function (error) {
         //에러가 났을때 실행
         console.log(error)
-      })``
+      })
       .then(() => {
         // try catch finally 에서 finally 부분에 해당
         console.log('에러가 나든 안나든 무조건 실행')
       })
   }
 
-  const removeClick = (event) => {
-    let no = event.target.name  // target = input 태그를 가리킴
-    // console.log(event)
-    // console.log(no)
-    // console.log(event.target.value)
+  // const onRemove = (id) => {
+  //   // user.id 가 파라미터로 일치하지 않는 원소만 추출해서 새로운 배열을 만듬
+  //   // = user.id 가 id 인 것을 제거함
+  //   // users.filter((user) => user.id !== id
 
-    // 클릭했을 때의 name과 현재 (10명의 이름들) 이름과 다를 경우, 다른 이름의 값들을 새로운 배열로 만들어 리턴
-    // 1번 객체를 클릭 = 총 1~10번의 객체들과 비교 > 2~10는 1번과 다름 > 2~10번을 새로운 배열로 만들고 contacts에 리턴 (1번은 제외)
+  //   setUsers(users.filter((user) => user.id !== id));
+  // };
+
+  const removeClick = (event) => {
+    let no = event.target.name
+    console.log(event)
+    console.log(no)
+    console.log(event.target.value)
+
     setContacts(contacts.filter((contact) => contact.no != no))
   }
 
