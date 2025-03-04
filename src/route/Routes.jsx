@@ -1,6 +1,10 @@
+import { CounterProvider } from "../context/CounterContext"
 import BoardPage from "../pages/BoardPage"
 import BootstrapPage from "../pages/BootstrapPage"
 import ConditionalPage from "../pages/ConditionalPage"
+import ContextNotUsePage from "../pages/ContextNotUsePage"
+import ContextUsedPage from "../pages/ContextUsedPage"
+import CounterContextPage from "../pages/CounterContextPage"
 import CounterPage from "../pages/CounterPage"
 import HelloPage from "../pages/HelloPage"
 import HomePage from "../pages/HomePage"
@@ -84,6 +88,27 @@ const routes = [
         path: '/useref2',
         element: <UseRef2Page />,
         title: 'useRef-2',
+    },
+
+    {
+        path: '/contextnotuse',
+        element: <ContextNotUsePage />,
+        title: '컨텍스트API미사용',
+    },
+
+    {
+        path: '/contextused',
+        element: <ContextUsedPage/>,
+        title: '컨텍스트API사용',
+    },
+
+    {
+        path: '/countercontext',
+        element: ( 
+        <CounterProvider>
+            <CounterContextPage/>
+        </CounterProvider>),
+        title: '컨텍스트API사용',
     },
   ]
   export default routes
