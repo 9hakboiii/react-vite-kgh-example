@@ -6,6 +6,7 @@ import userService from '../services/UserService'
 const AxiosGetPage2 = () => {
   const [data, setData] = useState(null)
 
+  // 동기 통신 방법
   useEffect(()=>{
     userService.getUsers().then((data)=>{
       setData(data)

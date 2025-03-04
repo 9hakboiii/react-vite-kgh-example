@@ -4,10 +4,12 @@ import React, { useEffect, useState } from 'react'
 const AxiosClient = () => {
   const [contacts, setContacts] = useState(null)
 
+  // 버튼을 클릭할때만 data 끌고오기
   useEffect(() => {
     getClick()
   }, [])
 
+  // 비동기 통신 방법
   const getClick = () => {
     axios
       .get('https://sample.bmaster.kro.kr/contacts?pageno=3&pagesize=10')
