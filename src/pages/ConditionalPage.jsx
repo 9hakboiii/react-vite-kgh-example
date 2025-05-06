@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from "react";
 
 // 조건부 랜더링 예제
 const ConditionalPage = () => {
-  const isLogin = true
+  const isLogin = true;
 
   // 1. 조건부 랜더링 = if 문 사용 (return 밖에서 사용, 많이 사용 안 함)
   // if (isLogin) {
@@ -19,7 +19,7 @@ const ConditionalPage = () => {
   //     <Fragment>
   //       <h2>조건부 랜더링 예시 1번입니다.</h2>
   //       <div>
-  //         <button style={{margin: 10}}>Logout</button>
+  //         <button style={{margin: 10}}>Login</button>
   //       </div>
   //     </Fragment>
   //   )
@@ -49,7 +49,6 @@ const ConditionalPage = () => {
   //     return null
   // }
 
-  
   // 3. 조건부 랜더링 = 삼항연산자 사용 (1순위)
   // return (
   //   <Fragment>
@@ -68,21 +67,18 @@ const ConditionalPage = () => {
   //   </Fragment>
   // )
 
-
   // 4. 조건부 랜더링 = && 연산자 사용 (2순위)
 
   return (
     <Fragment>
       <h2>조건부 랜더링 예시 4번입니다.</h2>
-      {
-        isLogin && (
-          <div>
-            <button style={{margin: 10}}>Logout</button>
-          </div>
-        )
-      }
+      {isLogin && (
+        <div>
+          <button style={{ margin: 10 }}>Logout</button>
+        </div>
+      )}
     </Fragment>
-  )
-}
+  );
+};
 
-export default ConditionalPage
+export default ConditionalPage;
